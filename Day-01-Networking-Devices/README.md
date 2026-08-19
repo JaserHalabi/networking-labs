@@ -1,4 +1,4 @@
-﻿# Networking Devices Overview
+# Networking Devices Overview
 
 > **Lab Folder:** `Day-01-Networking-Devices`
 
@@ -14,7 +14,7 @@ Identify and configure routers, switches, and end devices in Packet Tracer.
 
 ![Topology Diagram](topology.png)
 
-> _Replace `topology.png` with your exported Packet Tracer topology screenshot._
+> _(Topology image added)_
 
 ---
 
@@ -48,9 +48,9 @@ end
 
 ## 📝 Notes
 
-- _Add any lab-specific observations or troubleshooting tips here._
-- Packet Tracer version used: **X.X**
-- Date completed: **YYYY-MM-DD**
+- **Lab Reflection:** Explored the fundamental components of a network. Learned the core functions and purposes of key hardware, including routers, switches, firewalls, servers, and end devices (PCs).
+- Packet Tracer version used: **8.x**
+- Date completed: **2026-08-19**
 
 ---
 
