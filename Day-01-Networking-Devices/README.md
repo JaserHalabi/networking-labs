@@ -6,7 +6,7 @@
 
 ## 🎯 Objective
 
-Identify and configure routers, switches, and end devices in Packet Tracer.
+Familiarize with the Cisco Packet Tracer interface by locating, placing, and identifying fundamental network components including routers, switches, firewalls, servers, and end devices.
 
 ---
 
@@ -14,41 +14,28 @@ Identify and configure routers, switches, and end devices in Packet Tracer.
 
 ![Topology Diagram](topology.png)
 
-> _(Topology image added)_
-
 ---
 
-## 🖥️ Key CLI Commands
+## 👣 Step-by-Step Walkthrough
 
-```bash
-! ─────────────────────────────────────────────
-! Example commands for: Networking Devices Overview
-! ─────────────────────────────────────────────
+1. **Workspace Setup:** Opened a new logical workspace in Cisco Packet Tracer.
+2. **Adding End Devices:** Located the "End Devices" category and dragged generic PCs and Servers onto the workspace. These represent the sources and destinations of network traffic.
+3. **Adding Switches:** Navigated to "Network Devices > Switches" and placed a switch. Switches act as central connection points for local area networks (LANs).
+4. **Adding Routers:** Navigated to "Network Devices > Routers" and placed a router. Routers connect different networks together and route traffic between them.
+5. **Adding Security Devices:** Located the "Security" category and placed an ASA Firewall. Firewalls monitor and control incoming and outgoing network traffic based on security rules.
+6. **Visual Inspection:** Hovered over and inspected the devices to understand their physical interfaces and default hardware configurations.
 
-! Replace the placeholders below with actual commands from your lab.
-enable
-configure terminal
-
-! TODO: Add your key configuration commands here
-
-end
-```
-
----
-
-## ✅ Verification Steps
-
-| Step | Command | Expected Output |
-|------|---------|----------------|
-| 1 | `show ip interface brief` | All interfaces Up/Up |
-| 2 | `ping <destination>` | Success rate 100% |
-| 3 | _(add more steps…)_ | _(expected result)_ |
+*(Note: No CLI configurations or cable connections were required for this introductory topology.)*
 
 ---
 
 ## 📝 Notes
 
-- **Lab Reflection:** Explored the fundamental components of a network. Learned the core functions and purposes of key hardware, including routers, switches, firewalls, servers, and end devices (PCs).
+- **Lab Reflection:** Today's session provided a solid visual foundation for networking hardware. I learned how to navigate the equipment catalog in Packet Tracer and gained a clear understanding of the distinct roles each device plays:
+  - **Routers:** Direct traffic between completely different networks.
+  - **Switches:** Connect multiple devices together within the same local network.
+  - **Firewalls:** Protect the network edge from unauthorized access and filter traffic.
+  - **End Devices (PCs/Servers):** The actual clients and hosts that generate and consume data.
 - Packet Tracer version used: **8.x**
 - Date completed: **2026-08-19**
 
