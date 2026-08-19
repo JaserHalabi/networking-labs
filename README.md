@@ -11,7 +11,7 @@
 | 01 | [Day-01-Networking-Devices](./Day-01-Networking-Devices/) | Networking Devices Overview | ✅ Complete | 2026-08-19 |
 | 02 | [Day-02-Connecting-Devices](./Day-02-Connecting-Devices/) | Connecting Devices | ✅ Complete | 2026-08-19 |
 | 03 | [Day-03-OSI-Model](./Day-03-OSI-Model/) | OSI Model & Encapsulation | ✅ Complete | 2026-08-19 |
-| 04 | [Day-04-IPv4-Addressing](./Day-04-IPv4-Addressing/) | IPv4 Addressing & Subnetting | ⬜ Not Started | — |
+| 04 | [Day-04-Basic-Network-Security](./Day-04-Basic-Network-Security/) | Basic Network Security | ✅ Complete | 2026-08-19 |
 | 05 | [Day-05-IPv6-Addressing](./Day-05-IPv6-Addressing/) | IPv6 Addressing | ⬜ Not Started | — |
 | 06 | [Day-06-Static-Routing](./Day-06-Static-Routing/) | Static Routing | ⬜ Not Started | — |
 | 07 | [Day-07-RIP](./Day-07-RIP/) | RIP (Routing Information Protocol) | ⬜ Not Started | — |
