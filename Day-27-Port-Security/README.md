@@ -36,16 +36,6 @@ end
 
 ---
 
-## ✅ Verification Steps
-
-| Step | Command | Expected Output |
-|------|---------|----------------|
-| 1 | `show ip interface brief` | All interfaces Up/Up |
-| 2 | `ping <destination>` | Success rate 100% |
-| 3 | _(add more steps…)_ | _(expected result)_ |
-
----
-
 ## 📝 Notes
 
 - _Add any lab-specific observations or troubleshooting tips here._
