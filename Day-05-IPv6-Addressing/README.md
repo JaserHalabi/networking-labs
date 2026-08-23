@@ -12,18 +12,12 @@ Configure IPv6 global unicast and link-local addressing, enable IPv6 unicast rou
 
 ## 📖 Theoretical Fundamentals
 
-### 1. IPv4 vs. IPv6 Key Differences
-
-| Feature | IPv4 | IPv6 |
-| :--- | :--- | :--- |
-| **Address Length** | 32 bits (4 bytes) | **128 bits** (16 bytes) |
-| **Notation** | Dotted decimal (e.g., `192.168.1.1`) | Hexadecimal hextets (e.g., `2001:db8:acad:1::1`) |
-| **Total Address Space** | $\approx 4.29 \times 10^9$ ($2^{32}$) | $\approx 3.4 \times 10^{38}$ ($2^{128}$) |
-| **Subnet Mask Format** | Dotted decimal (e.g., `255.255.255.0`) or `/24` | Prefix length only (e.g., `/64`) |
-| **Address Resolution** | ARP (Address Resolution Protocol - Broadcast) | NDP (Neighbor Discovery Protocol - Multicast) |
-| **Packet Types** | Unicast, Multicast, Broadcast | Unicast, Multicast, **Anycast** (No Broadcast) |
-| **NAT Necessity** | Mandatory for scaling due to exhaustion | Not required (end-to-end global addressing) |
-| **Auto-Configuration** | DHCPv4 or Manual | SLAAC, DHCPv6 (Stateless / Stateful), or Manual |
+### What is IPv6? (Beginner Summary)
+- **Why do we need IPv6?** The internet ran out of IPv4 addresses. IPv4 is 32 bits (~4.3 billion addresses), while IPv6 is **128 bits** (giving virtually unlimited addresses).
+- **How is it written?** Instead of 4 numbers separated by dots (like `192.168.1.1`), IPv6 is written in hexadecimal using 8 groups separated by colons (like `2001:db8:acad:1::1`).
+- **Quick Comparison:**
+  - **IPv4:** 32 bits · Dotted-decimal (`0` to `255`) · Uses ARP & Broadcast.
+  - **IPv6:** 128 bits · Hexadecimal (`0-9` and `A-F`) · Uses Neighbor Discovery & Multicast (no Broadcast).
 
 ---
 
@@ -76,14 +70,6 @@ copy running-config startup-config
 
 ## ✅ Verification & Connectivity
 
-### Verification Commands
-
-| Command | Purpose |
-| :--- | :--- |
-| `show ipv6 interface brief` | Verify IPv6 global unicast and link-local addresses and interface status (Up/Up) |
-| `show ipv6 route` | Display the IPv6 routing table showing connected (`C`) and local (`L`) prefixes |
-| `ping <ipv6-address>` | Test ICMPv6 connectivity |
-
 ### End-to-End Ping Test
 Ping from `PC0` (`2001:db8:acad:1::10`) across the router to `PC1` (`2001:db8:acad:2::10`):
 
@@ -105,10 +91,9 @@ Ping statistics for 2001:DB8:ACAD:2::10:
 
 ---
 
-## 📝 Notes & Key Takeaways
+## 📝 Notes & Reflection
 
-- **`ipv6 unicast-routing`**: By default, Cisco routers do not forward IPv6 packets. Running `ipv6 unicast-routing` in global configuration mode enables IPv6 routing and allows the router to send ICMPv6 Router Advertisements (RA).
-- **Link-Local Addresses (`FE80::/10`)**: Automatically generated on every IPv6-enabled interface, used for local link communication (NDP, next-hop routing).
+- Successfully configured two separate IPv6 subnets on a Cisco 1941 router and verified full end-to-end communication with ICMPv6 echo replies.
 - Packet Tracer version used: **8.x / 9.x**
 - Date completed: **2026-08-23**
 
