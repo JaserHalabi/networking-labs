@@ -12,7 +12,7 @@
 | 02 | [Day-02-Connecting-Devices](./Day-02-Connecting-Devices/) | Connecting Devices | ✅ Complete | 2026-08-19 |
 | 03 | [Day-03-OSI-Model](./Day-03-OSI-Model/) | OSI Model & Encapsulation | ✅ Complete | 2026-08-19 |
 | 04 | [Day-04-Basic-Network-Security](./Day-04-Basic-Network-Security/) | Basic Network Security | ✅ Complete | 2026-08-19 |
-| 05 | [Day-05-IPv6-Addressing](./Day-05-IPv6-Addressing/) | IPv6 Addressing | ⬜ Not Started | — |
+| 05 | [Day-05-IPv6-Addressing](./Day-05-IPv6-Addressing/) | IPv6 Addressing | ✅ Complete | 2026-08-23 |
 | 06 | [Day-06-Static-Routing](./Day-06-Static-Routing/) | Static Routing | ⬜ Not Started | — |
 | 07 | [Day-07-RIP](./Day-07-RIP/) | RIP (Routing Information Protocol) | ⬜ Not Started | — |
 | 08 | [Day-08-OSPF](./Day-08-OSPF/) | OSPF Single-Area | ⬜ Not Started | — |
