@@ -1,7 +1,5 @@
 # RIP (Routing Information Protocol)
 
-> **Lab Folder:** `Day-07-RIP`
-
 ---
 
 ## 🎯 Objective
@@ -12,10 +10,10 @@ Connect 3 routers, 3 switches, and PCs together, and configure dynamic routing u
 
 ## 📖 Theoretical Fundamentals
 
-### What is RIP? (Beginner Summary)
+### What is RIP?
 - **What is RIP?** RIP stands for Routing Information Protocol. It is used in small to medium-sized networks so routers can automatically learn and share routes with each other.
 - **How does it choose paths?** It finds the best path based on the number of **hops** (the number of routers a packet travels through). The path with the fewest hops is chosen.
-- **Hop Limit:** The maximum hop count is 15 hops (16 means unreachable).
+- **Hop Limit:** The maximum hop count is 15 hops
 - **Important Commands Used:**
   - `router rip` — Enters RIP routing configuration mode on the router.
   - `network <network-address>` — Tells the router which directly connected networks to advertise to neighbor routers.
