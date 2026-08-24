@@ -6,51 +6,34 @@
 
 ## 🎯 Objective
 
-Configure dynamic routing using **RIP (Routing Information Protocol)** across a multi-router topology (3 Routers, 3 Switches, and 6 PCs) to enable end-to-end communication without manual static route definitions.
+Connect 3 routers, 3 switches, and PCs together, and configure dynamic routing using RIP so all devices across different networks can communicate.
 
 ---
 
 ## 📖 Theoretical Fundamentals
 
-### What is RIP (Routing Information Protocol)?
-- **Dynamic Routing:** Unlike static routing where each route is entered manually, dynamic routing protocols allow routers to automatically discover remote networks, share routing tables, and adapt to network topology changes.
-- **Distance Vector Protocol:** RIP is a distance vector routing protocol designed for small-to-medium-sized networks.
-- **Metric (Hop Count):** RIP determines the best path to a destination network based solely on the number of **hops** (routers) a packet must traverse.
-  - **Maximum Hop Count:** 15 hops. A hop count of 16 represents infinity (unreachable network), preventing routing loops.
-- **Update Mechanism:** RIP periodically broadcasts or multicasts its routing table to neighboring routers every 30 seconds.
-
-### Key RIP Commands
-- **`router rip`**: Enters RIP routing protocol configuration mode in Cisco IOS.
-- **`network <network-address>`**: Enables RIP on any local interface that belongs to the specified major classful network and advertises that network to neighboring routers.
-- **`version 2`** *(Optional / Recommended)*: Switches from RIPv1 (broadcasts, classful) to RIPv2 (multicasts to `224.0.0.9`, supports VLSM and classless routing).
-- **`no auto-summary`** *(RIPv2)*: Prevents automatic summarization at major classful network boundaries.
+### What is RIP? (Beginner Summary)
+- **What is RIP?** RIP stands for Routing Information Protocol. It is used in small to medium-sized networks so routers can automatically learn and share routes with each other.
+- **How does it choose paths?** It finds the best path based on the number of **hops** (the number of routers a packet travels through). The path with the fewest hops is chosen.
+- **Hop Limit:** The maximum hop count is 15 hops (16 means unreachable).
+- **Important Commands Used:**
+  - `router rip` — Enters RIP routing configuration mode on the router.
+  - `network <network-address>` — Tells the router which directly connected networks to advertise to neighbor routers.
 
 ---
 
 ## 🖼️ Topology & Lab Walkthrough
 
 ### Topology Overview
-The network connects three LANs across two WAN point-to-point serial links:
+The network connects 3 local LANs across 3 routers using serial links:
 
 ![Topology Diagram](topology.png)
 
-### Addressing Table
-
-| Device | Interface | IP Address | Subnet Mask | Default Gateway | Connected To |
-|--------|-----------|------------|-------------|-----------------|--------------|
-| **Router0 (Left)** | `Fa0/0` | `192.168.1.1` | `255.255.255.0` (/24) | — | Switch0 `Fa0/1` (LAN 1) |
-| | `Se2/0` | `10.0.0.1` | `255.255.255.252` (/30) | — | Router1 `Se3/0` (WAN 1) |
-| **PC0** | `FastEthernet0` | `192.168.1.2` | `255.255.255.0` | `192.168.1.1` | Switch0 `Fa0/3` |
-| **PC1** | `FastEthernet0` | `192.168.1.3` | `255.255.255.0` | `192.168.1.1` | Switch0 `Fa0/2` |
-| **Router1 (Middle)**| `Fa0/0` | `192.168.2.1` | `255.255.255.0` (/24) | — | Switch1 `Fa0/3` (LAN 2) |
-| | `Se3/0` | `10.0.0.2` | `255.255.255.252` (/30) | — | Router0 `Se2/0` (WAN 1) |
-| | `Se2/0` (or Serial) | `20.0.0.1` | `255.255.255.252` (/30) | — | Router2 `Se2/0` (WAN 2) |
-| **PC2** | `FastEthernet0` | `192.168.2.2` | `255.255.255.0` | `192.168.2.1` | Switch1 `Fa0/1` |
-| **PC3** | `FastEthernet0` | `192.168.2.3` | `255.255.255.0` | `192.168.2.1` | Switch1 `Fa0/2` |
-| **Router2 (Right)** | `Fa0/0` | `192.168.3.1` | `255.255.255.0` (/24) | — | Switch2 `Fa0/3` (LAN 3) |
-| | `Se2/0` | `20.0.0.2` | `255.255.255.252` (/30) | — | Router1 (WAN 2) |
-| **PC4** | `FastEthernet0` | `192.168.3.2` | `255.255.255.0` | `192.168.3.1` | Switch2 `Fa0/1` |
-| **PC5** | `FastEthernet0` | `192.168.3.3` | `255.255.255.0` | `192.168.3.1` | Switch2 `Fa0/2` |
+* **LAN 1 (Left):** `192.168.1.0/24` (Router 0 `Fa0/0`: `192.168.1.1`, PCs: `192.168.1.2`, `192.168.1.3`)
+* **WAN 1 (Link R0-R1):** `10.0.0.0/30` (Router 0 `Se2/0`: `10.0.0.1`, Router 1 `Se3/0`: `10.0.0.2`)
+* **LAN 2 (Middle):** `192.168.2.0/24` (Router 1 `Fa0/0`: `192.168.2.1`, PCs: `192.168.2.2`, `192.168.2.3`)
+* **WAN 2 (Link R1-R2):** `20.0.0.0/30` (Router 1 `Se2/0`: `20.0.0.1`, Router 2 `Se2/0`: `20.0.0.2`)
+* **LAN 3 (Right):** `192.168.3.0/24` (Router 2 `Fa0/0`: `192.168.3.1`, PCs: `192.168.3.2`, `192.168.3.3`)
 
 ---
 
@@ -152,36 +135,10 @@ copy running-config startup-config
 
 ---
 
-## 🔍 Verification & Troubleshooting Commands
-
-### 1. View Learned Routes
-Check the routing table to verify dynamic routes learned via RIP (designated by the `R` code):
-```bash
-show ip route
-```
-*Sample output:*
-```text
-Gateway of last resort is not set
-
-R    192.168.2.0/24 [120/1] via 10.0.0.2, 00:00:18, Serial2/0
-R    192.168.3.0/24 [120/2] via 10.0.0.2, 00:00:18, Serial2/0
-     10.0.0.0/30 is subnetted, 1 subnets
-C       10.0.0.0 is directly connected, Serial2/0
-C    192.168.1.0/24 is directly connected, FastEthernet0/0
-```
-> `[120/1]`: `120` is the Administrative Distance (AD) for RIP; `1` is the Hop Count.
-
-### 2. Verify RIP Process & Timers
-```bash
-show ip protocols
-```
-
----
-
-## ✅ Connectivity Verification
+## ✅ Verification & Connectivity
 
 ### End-to-End Ping Test
-Testing connectivity from a host across the network to `PC2` (`192.168.2.2`):
+Testing connectivity from a PC across the routers to `PC2` (`192.168.2.2`):
 
 ![Ping Verification](ping-verification.png)
 
@@ -201,15 +158,15 @@ Approximate round trip times in milli-seconds:
     Minimum = 9ms, Maximum = 14ms, Average = 12ms
 ```
 
-> **Note on Initial Timeout:** The first ping packet encounters a temporary delay/timeout due to ARP resolution across router boundaries. Once ARP tables are populated, subsequent packets succeed with low latency.
+> **Note on Initial Timeout:** The first ping packet times out because of the initial ARP request resolving the destination MAC address. After that, subsequent packets succeed!
 
 ---
 
-## 📝 Notes & Key Takeaways
+## 📝 Notes & Reflection
 
-- **Hop Count Metric:** RIP evaluates best paths purely by hop count rather than link bandwidth or latency.
-- **Dynamic Propagation:** By entering `router rip` and issuing `network <network-address>`, routers automatically exchange route information without requiring explicit `ip route` statements for every remote subnet.
-- **Convergence:** Routers converge automatically once all RIP network statements are declared and periodic updates are exchanged.
+- First time configuring RIP dynamic routing between 3 routers.
+- Instead of manually writing every single route like static routing, we just enable `router rip` and type `network` with the directly connected IP networks.
+- The routers automatically share their routes with each other using hop count.
 - Packet Tracer version used: **8.x / 9.x**
 - Date completed: **2026-08-24**
 
