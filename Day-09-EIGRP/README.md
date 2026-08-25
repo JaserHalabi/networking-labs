@@ -158,9 +158,7 @@ Approximate round trip times in milli-seconds:
 
 ## 📝 Notes & What I Learnt
 
-- **EIGRP Adjacency:** As soon as matching networks and AS numbers are entered, EIGRP forms neighbor relationships right away (seeing `%DUAL-5-NBRCHANGE: IP-EIGRP 1: Neighbor ... is up: new adjacency`).
 - **Wildcard Masks:** Learned how to write wildcard masks for subnets (subtracting subnet mask from `255.255.255.255`, e.g., `/30` is `0.0.0.3` and `/24` is `0.0.0.255`).
-- **Autonomous System (AS):** The AS number must match across all routers (we used AS `1`) for them to establish neighbor relationships and exchange routing tables.
 - **Fast Convergence:** Routing updates happen almost instantaneously without long delays.
 - Packet Tracer version used: **8.x / 9.x**
 - Date completed: **2026-08-25**
