@@ -16,7 +16,7 @@
 | 06 | [Day-06-Static-Routing](./Day-06-Static-Routing/) | Static Routing | ✅ Complete | 2026-08-24 |
 | 07 | [Day-07-RIP](./Day-07-RIP/) | RIP (Routing Information Protocol) | ✅ Complete | 2026-08-24 |
 | 08 | [Day-08-OSPF](./Day-08-OSPF/) | OSPF Single-Area | ⬜ Not Started | — |
-| 09 | [Day-09-EIGRP](./Day-09-EIGRP/) | EIGRP | ⬜ Not Started | — |
+| 09 | [Day-09-EIGRP](./Day-09-EIGRP/) | EIGRP | ✅ Complete | 2026-08-25 |
 | 10 | [Day-10-VLANs](./Day-10-VLANs/) | VLANs & VLAN Trunking | ⬜ Not Started | — |
 | 11 | [Day-11-Inter-VLAN-Routing](./Day-11-Inter-VLAN-Routing/) | Inter-VLAN Routing | ⬜ Not Started | — |
 | 12 | [Day-12-STP](./Day-12-STP/) | Spanning Tree Protocol | ⬜ Not Started | — |
