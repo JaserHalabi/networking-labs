@@ -12,7 +12,7 @@ Connect 3 routers across serial WAN links and configure **EIGRP** dynamic routin
 
 ## 📖 Theoretical Fundamentals
 
-### What is EIGRP? (Beginner Summary)
+### What is EIGRP?
 - **What is EIGRP?** EIGRP stands for **Enhanced Interior Gateway Routing Protocol**. It is an advanced dynamic routing protocol developed by Cisco that is much faster and smarter than RIP.
 - **How it works:**
   - Routers discover their directly connected neighbors and form an **adjacency** (neighbor relationship).
