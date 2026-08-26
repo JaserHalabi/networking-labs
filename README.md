@@ -62,24 +62,12 @@ networking/
 │   └── topology.png
 └── ...  (Day-03 through Day-30)
 ```
-
----
-
-## 🚀 How to Use This Repo
-
-1. Open the day's folder and read the **Objective** in its `README.md`.
-2. Build the topology in **Cisco Packet Tracer** (`.pkt` file).
-3. Export your topology as `topology.png` and drop it in the folder.
-4. Fill in the **Key CLI Commands** and **Verification Steps** sections.
-5. Update the **Status** and **Date Completed** columns in the table above.
-
 ---
 
 ## 🛠️ Tools & Prerequisites
 
 - [Cisco Packet Tracer](https://www.netacad.com/courses/packet-tracer) 8.x+
-- Basic familiarity with IOS CLI (`enable`, `configure terminal`, etc.)
 
 ---
 
-_Portfolio maintained by **[Your Name]** · Started **2026-08-19**_
+_Portfolio maintained by **Jaser Halabi** · Started **2026-08-19**_
