@@ -48,37 +48,9 @@ Key hands-on labs completed and verified with topologies, configuration scripts,
 | 05 | [IPv6 Dual-Stack Addressing](./Day-05-IPv6-Addressing/) | Global Unicast Addressing (GUA) and IPv6 neighbor discovery | Complete | 2026-08-23 |
 | 06 | [Dual-Router Static Routing over Serial WAN](./Day-06-Static-Routing/) | Point-to-point /30 serial WAN links and static routing tables | Complete | 2026-08-24 |
 | 07 | [Dynamic Routing with RIP v2](./Day-07-RIP/) | Distance-vector protocol deployment and convergence testing | Complete | 2026-08-24 |
-| 08 | [OSPF Single-Area Configuration](./Day-08-OSPF/) | Single-area OSPF, router IDs, and passive interfaces | Planned | — |
-| 09 | [Enterprise Routing with EIGRP](./Day-09-EIGRP/) | Autonomous system routing, composite metric tuning, and convergence | Complete | 2026-08-25 |
-| 10 | [VLAN Segmentation & Trunking](./Day-10-VLANs/) | IEEE 802.1Q trunking and broadcast domain separation | Planned | — |
-| 11 | [Router-on-a-Stick Inter-VLAN Routing](./Day-11-Inter-VLAN-Routing/) | Sub-interface 802.1Q encapsulation and inter-VLAN traffic | Planned | — |
-| 12 | [Spanning Tree Protocol (STP)](./Day-12-STP/) | Layer 2 loop prevention and root bridge election | Planned | — |
-| 13 | [Link Aggregation via EtherChannel](./Day-13-EtherChannel/) | LACP and PAgP multi-link bundling and bandwidth aggregation | Planned | — |
-| 14 | [Enterprise DHCP & Relay](./Day-14-DHCP/) | DHCP server pools, exclusions, and IP helper-address relay | Planned | — |
-| 15 | [DNS Name Resolution](./Day-15-DNS/) | DNS records, domain hierarchy, and client resolution | Planned | — |
-| 16 | [NAT & Port Address Translation](./Day-16-NAT/) | Static NAT, dynamic NAT pools, and overload (PAT) | Planned | — |
-| 17 | [Access Control Lists (ACLs)](./Day-17-ACLs/) | Standard and extended numbered/named IP access lists | Planned | — |
-| 18 | [Discovery Protocols (CDP & LLDP)](./Day-18-CDP-LLDP/) | Layer 2 device discovery and neighbor mapping | Planned | — |
-| 19 | [Secure Administration (SSH & Telnet)](./Day-19-SSH-Telnet/) | Cryptographic key generation, SSHv2, and VTY restriction | Planned | — |
-| 20 | [Network Time Protocol (NTP)](./Day-20-NTP/) | Stratum hierarchies and centralized time synchronization | Planned | — |
-| 21 | [Centralized Logging & SNMP](./Day-21-Syslog-SNMP/) | Syslog severity levels and SNMP agent monitoring | Planned | — |
-| 22 | [Point-to-Point WAN Encapsulation](./Day-22-WAN-PPP/) | PPP, CHAP/PAP authentication, and HDLC framing | Planned | — |
-| 23 | [Frame Relay WAN Switching](./Day-23-Frame-Relay/) | Packet-switched WAN architectures and DLCI mapping | Planned | — |
-| 24 | [Site-to-Site GRE Tunnels](./Day-24-GRE-Tunnels/) | Virtual point-to-point tunneling and tunnel interfaces | Planned | — |
-| 25 | [Next-Gen IPv6 Dynamic Routing](./Day-25-IPv6-Routing/) | Dynamic IPv6 routing implementations (OSPFv3) | Planned | — |
-| 26 | [Wireless LAN Infrastructure](./Day-26-Wireless-LAN/) | Wireless LAN Controllers (WLC) and Lightweight APs | Planned | — |
-| 27 | [Port Security & DHCP Snooping](./Day-27-Port-Security/) | Layer 2 port security and DHCP snooping defense | Planned | — |
-| 28 | [Quality of Service (QoS)](./Day-28-QoS/) | Traffic classification, marking, and queue prioritization | Planned | — |
-| 29 | [Network Automation Fundamentals](./Day-29-Network-Automation/) | Programmability concepts, APIs, and configuration templates | Planned | — |
-| 30 | [Enterprise Capstone Architecture](./Day-30-Capstone-Project/) | Comprehensive enterprise infrastructure deployment | Planned | — |
+| 08 | [Enterprise Routing with EIGRP](./Day-09-EIGRP/) | Autonomous system routing, composite metric tuning, and convergence | Complete | 2026-08-25 |
 
-### Status Legend
-
-| Status | Description |
-|---|---|
-| **Planned** | Lab scenario specified and scheduled for execution |
-| **In Progress** | Topology construction and protocol validation underway |
-| **Complete** | Configuration deployed, verified via diagnostics, and documented |
+> *Additional lab implementations will be analyzed, documented, and published here as new topologies and configurations are completed.*
 
 ---
 
