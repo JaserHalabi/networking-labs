@@ -2,7 +2,7 @@
 
 [![Packet Tracer](https://img.shields.io/badge/Platform-Cisco%20Packet%20Tracer%208.x-blue?style=flat-square)](https://www.netacad.com/courses/packet-tracer)
 [![Cisco IOS](https://img.shields.io/badge/CLI-Cisco%20IOS-informational?style=flat-square)](https://www.cisco.com)
-[![Status](https://img.shields.io/badge/Labs%20Completed-8%20Verified-success?style=flat-square)](#lab-execution-matrix)
+[![Status](https://img.shields.io/badge/Labs%20Completed-9%20Verified-success?style=flat-square)](#lab-execution-matrix)
 [![Engineer](https://img.shields.io/badge/Engineer-Jaser%20Halabi-lightgrey?style=flat-square&logo=github)](https://github.com/JaserHalabi)
 
 > A practical portfolio of enterprise networking labs, Cisco IOS CLI configurations, routing and switching architectures, and empirical protocol verifications built and tested in **Cisco Packet Tracer**.
@@ -29,6 +29,7 @@ Key hands-on labs completed and verified with topologies, configuration scripts,
 
 | Lab | Engineering Focus | Key IOS Highlights | Verification Capture |
 |---|---|---|---|
+| **[Enterprise Multi-Router RIP Network](./Multi-Router-RIP-Routing/)** | 8-router circular backbone network with 14 subnets and multi-hop metric convergence | `router rip`, `version 2`, `network`, `no auto-summary` | [Topology & Ping Capture](./Multi-Router-RIP-Routing/ping-verification.png) |
 | **[EIGRP Dynamic Routing](./Day-09-EIGRP/)** | Dynamic routing across dual routers and multiple LAN subnets | `router eigrp <AS>`, `network <net> <wildcard>`, `no auto-summary` | [Topology & Ping Capture](./Day-09-EIGRP/ping-verification.png) |
 | **[RIP Dynamic Routing](./Day-07-RIP/)** | Distance-vector protocol deployment and metric convergence | `router rip`, `version 2`, `network` statements | [Topology & Ping Capture](./Day-07-RIP/ping-verification.png) |
 | **[Static Routing over Serial WAN](./Day-06-Static-Routing/)** | Point-to-point /30 serial link interconnecting isolated subnets | `interface Serial0/3/0`, `ip route <dest> <mask> <next-hop>` | [Topology & Ping Capture](./Day-06-Static-Routing/ping-verification.png) |
@@ -49,6 +50,7 @@ Key hands-on labs completed and verified with topologies, configuration scripts,
 | 06 | [Dual-Router Static Routing over Serial WAN](./Day-06-Static-Routing/) | Point-to-point /30 serial WAN links and static routing tables | Complete | 2026-08-24 |
 | 07 | [Dynamic Routing with RIP v2](./Day-07-RIP/) | Distance-vector protocol deployment and convergence testing | Complete | 2026-08-24 |
 | 08 | [Enterprise Routing with EIGRP](./Day-09-EIGRP/) | Autonomous system routing, composite metric tuning, and convergence | Complete | 2026-08-25 |
+| 09 | [Enterprise Multi-Router RIP Network](./Multi-Router-RIP-Routing/) | 8-router circular backbone, 14 subnets, and multi-hop metric convergence | Complete | 2026-10-07 |
 
 > *Additional lab implementations will be analyzed, documented, and published here as new topologies and configurations are completed.*
 
@@ -75,10 +77,15 @@ graph LR
 ```text
 networking/
 ├── README.md                               ← Master portfolio dashboard (this file)
+├── Multi-Router-RIP-Routing/
+│   ├── README.md                           ← Objective, architecture, IOS CLI, and diagnostics
+│   ├── topology.png                        ← 8-router circular topology diagram
+│   ├── routing-table.png                   ← Full routing table capture (show ip route)
+│   └── ping-verification.png               ← Evidence of ICMP reachability and TTL hop count
 ├── Day-06-Static-Routing/
-│   ├── README.md                           ← Objective, topology layout, IOS CLI scripts, and analysis
-│   ├── topology.png                        ← Exported Packet Tracer topology diagram
-│   └── ping-verification.png               ← Evidence of ICMP reachability and round-trip timing
+│   ├── README.md
+│   ├── topology.png
+│   └── ping-verification.png
 ├── Day-09-EIGRP/
 │   ├── README.md
 │   ├── topology.png
