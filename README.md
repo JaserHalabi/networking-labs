@@ -56,45 +56,6 @@ Key hands-on labs completed and verified with topologies, configuration scripts,
 
 ---
 
-## Engineering Methodology
-
-```mermaid
-graph LR
-    A["1. Topology & Subnet Design"] --> B["2. Cisco IOS Configuration"]
-    B --> C["3. Protocol Convergence"]
-    C --> D["4. Empirical Verification"]
-```
-
-1. **Topology & Subnet Design:** Designing physical and logical architectures in Cisco Packet Tracer with precise IPv4/IPv6 address allocations.
-2. **Cisco IOS Configuration:** Writing modular, production-ready CLI configuration scripts for routers, switches, and security appliances.
-3. **Protocol Convergence:** Validating interface operational states (`show ip interface brief`), routing updates, and neighbor adjacencies (`show ip route`, `show ip protocols`).
-4. **Empirical Verification:** Testing end-to-end data plane reachability using ICMP ping diagnostics, capturing round-trip statistics, and archiving test results.
-
----
-
-## Repository Structure
-
-```text
-networking/
-├── README.md                               ← Master portfolio dashboard (this file)
-├── Multi-Router-RIP-Routing/
-│   ├── README.md                           ← Objective, architecture, IOS CLI, and diagnostics
-│   ├── topology.png                        ← 8-router circular topology diagram
-│   ├── routing-table.png                   ← Full routing table capture (show ip route)
-│   └── ping-verification.png               ← Evidence of ICMP reachability and TTL hop count
-├── Day-06-Static-Routing/
-│   ├── README.md
-│   ├── topology.png
-│   └── ping-verification.png
-├── Day-09-EIGRP/
-│   ├── README.md
-│   ├── topology.png
-│   └── ping-verification.png
-└── ...
-```
-
----
-
 ## Environment & Tooling
 
 - **Simulation Platform:** [Cisco Packet Tracer](https://www.netacad.com/courses/packet-tracer) 8.x+
