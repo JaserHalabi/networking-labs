@@ -1,9 +1,5 @@
 # Networking Devices Overview
 
-> **Lab Folder:** `Day-01-Networking-Devices`
-
----
-
 ## 🎯 Objective
 
 Familiarize with the Cisco Packet Tracer interface by locating, placing, and identifying fundamental network components including routers, switches, firewalls, servers, and end devices.

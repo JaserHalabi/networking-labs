@@ -1,9 +1,5 @@
 # EIGRP (Enhanced Interior Gateway Routing Protocol)
 
-> **Lab Folder:** `Day-09-EIGRP`
-
----
-
 ## 🎯 Objective
 
 Connect 3 routers across serial WAN links and configure **EIGRP** dynamic routing using Autonomous System (AS) 1 so all LANs and routers can communicate seamlessly.

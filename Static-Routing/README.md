@@ -1,9 +1,5 @@
 # Static Routing
 
-> **Lab Folder:** `Day-06-Static-Routing`
-
----
-
 ## 🎯 Objective
 
 Configure static routes between two Cisco routers over a serial link to allow communication between two separate LAN subnets (`192.168.1.0/24` and `192.168.2.0/24`).

@@ -1,9 +1,5 @@
 # Basic Network Security
 
-> **Lab Folder:** `Day-04-Basic-Network-Security`
-
----
-
 ## 🎯 Objective
 
 Learn fundamental Cisco IOS device hardening by configuring hostnames, setting up basic passwords, and implementing password encryption on routers and switches.

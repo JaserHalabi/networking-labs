@@ -1,9 +1,5 @@
 # Connecting Devices
 
-> **Lab Folder:** `Day-02-Connecting-Devices`
-
----
-
 ## 🎯 Objective
 
 Understand physical layer connectivity by selecting and applying the correct cable types (Straight-through, Crossover, and Fiber) to connect various networking devices, assuming Auto-MDIX is disabled.

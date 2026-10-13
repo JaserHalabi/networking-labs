@@ -1,9 +1,5 @@
 # OSI Model & Encapsulation
 
-> **Lab Folder:** `Day-03-OSI-Model`
-
----
-
 ## 🎯 Objective
 
 The objective of this exercise was to understand how data moves through the OSI Model by analyzing DHCP communication between a client device and a DHCP server.
