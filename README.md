@@ -2,7 +2,7 @@
 
 [![Packet Tracer](https://img.shields.io/badge/Platform-Cisco%20Packet%20Tracer%208.x-blue?style=flat-square)](https://www.netacad.com/courses/packet-tracer)
 [![Cisco IOS](https://img.shields.io/badge/CLI-Cisco%20IOS-informational?style=flat-square)](https://www.cisco.com)
-[![Status](https://img.shields.io/badge/Labs%20Completed-11%20Verified-success?style=flat-square)](#lab-execution-matrix)
+[![Status](https://img.shields.io/badge/Labs%20Completed-12%20Verified-success?style=flat-square)](#lab-execution-matrix)
 [![Engineer](https://img.shields.io/badge/Engineer-Jaser%20Halabi-lightgrey?style=flat-square&logo=github)](https://github.com/JaserHalabi)
 
 > A practical portfolio of enterprise networking labs, Cisco IOS CLI configurations, routing and switching architectures, and empirical protocol verifications built and tested in **Cisco Packet Tracer**.
@@ -29,6 +29,7 @@ Key hands-on labs completed and verified with topologies, configuration scripts,
 
 | Lab | Engineering Focus | Key IOS Highlights | Verification Capture |
 |---|---|---|---|
+| **[Multi-Router EIGRP Dual-Path Network](./Multi-Router-EIGRP-Routing/)** | 5-router dual-path redundant backbone, EIGRP AS 1 metric calculation, successor route selection, and ECMP load balancing | `router eigrp 1`, `network ...`, `show ip eigrp interfaces`, `show ip route` | [Topology & Ping Capture](./Multi-Router-EIGRP-Routing/ping-verification.png) |
 | **[OSPF Multi-Access & DR/BDR](./OSPF-Multi-Access/)** | Multi-access broadcast backbone, DR/BDR election, and DROTHER adjacency | `router ospf 1`, `router-id`, `network ... area 0` | [Topology & Ping Capture](./OSPF-Multi-Access/ping-verification.png) |
 | **[OSPF Single-Area Routing](./OSPF-Routing/)** | Single-area link-state routing, neighbor adjacencies, and ECMP load balancing | `router ospf 1`, `network ... area 0` | [Topology & Ping Capture](./OSPF-Routing/ping-verification.png) |
 | **[Enterprise Multi-Router RIP Network](./Multi-Router-RIP-Routing/)** | 8-router circular backbone network with 14 subnets and multi-hop metric convergence | `router rip`, `version 2`, `network`, `no auto-summary` | [Topology & Ping Capture](./Multi-Router-RIP-Routing/ping-verification.png) |
@@ -55,6 +56,7 @@ Key hands-on labs completed and verified with topologies, configuration scripts,
 | 09 | [Enterprise Multi-Router RIP Network](./Multi-Router-RIP-Routing/) | 8-router circular backbone, 14 subnets, and multi-hop metric convergence | Complete | 2026-10-07 |
 | 10 | [OSPF Single-Area Routing](./OSPF-Routing/) | Link-state routing, Area 0 adjacency, and ECMP multi-path convergence | Complete | 2026-10-13 |
 | 11 | [OSPF Multi-Access & DR/BDR Election](./OSPF-Multi-Access/) | Broadcast multi-access Area 0 backbone, DR/BDR election, and 6-LAN routing | Complete | 2026-10-14 |
+| 12 | [Multi-Router EIGRP Dual-Path Network](./Multi-Router-EIGRP-Routing/) | 5-router dual-path topology, EIGRP AS 1 metric calculation, ECMP load balancing, and ICMP verification | Complete | 2026-10-20 |
 
 > *Additional lab implementations will be analyzed, documented, and published here as new topologies and configurations are completed.*
 
